@@ -32,7 +32,7 @@ wss.on('connection', client => {  // Define behavior of the server
 
     }else{  // If the message does not come from a transmitter and is not an identification
       client.send("ERROR: cannot handle message")
-
+      console.log("Unusable Message from (" + client._socket.remoteAddress + ")")
     }
 
   })
